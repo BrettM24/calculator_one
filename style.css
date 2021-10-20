@@ -1,0 +1,920 @@
+.mainContainer{
+
+  display: grid;
+  grid-template-rows: 150px 750px; 
+  
+  height: 900px;
+
+}
+.header{
+
+  display: grid;
+  grid-template-columns: 1fr;
+
+  justify-items: center;
+  align-items: center;
+
+  font-size: 75px;
+  font-family: 'Creepster', cursive;
+
+  color: rgb(255, 179, 65);
+
+}
+.calcContainer{
+
+  display: grid;
+  grid-template-columns: 1fr 730px 1fr;
+
+  height: 760px;
+
+}
+.calcBody{
+  
+  display: grid;
+  grid-template-rows: 20px 210px 20px 80px 20px 80px 20px 80px 20px 80px 20px 80px 20px;
+
+  border-style: solid;
+  border-width: 5px 5px 5px 5px;
+  border-color: rgb(250, 150, 0);
+  border-radius: 3.5%;
+
+}
+.screenContainer{
+
+  display: grid;
+  grid-template-columns: 30px 660px 30px;
+
+}
+.screenBody{
+
+  border-style: solid;
+  border-width: 2px 2px 2px 2px;
+  border-color: rgb(250, 150, 0);
+  border-radius: 1.5%;
+
+  display: grid;
+  grid-template-rows: 78px 128px;
+  width: 656px;
+  height: 206px
+
+}
+.answerScreen{
+
+  display: grid;
+  justify-items: right;
+  padding: 20px 20px 0px 0px;
+
+  color:rgba(250, 150, 0, 0.952);
+  font-size: 40px;
+
+  font-family: 'Creepster', cursive;
+
+}
+.inputScreen{
+
+  display: grid;
+  justify-items: right;
+  padding: 40px 20px 0px 0px;
+
+  color:rgba(250, 150, 0, 0.952);
+  font-size: 70px;
+
+  font-family: 'Creepster', cursive;
+
+}
+.buttonRowOne{
+
+  display: grid;
+  grid-template-columns: 30px 150px 20px 150px 20px 150px 20px 150px 30px;
+
+}
+.buttonRowTwo{
+
+  display: grid;
+  grid-template-columns: 30px 150px 20px 150px 20px 150px 20px 150px 30px;
+  
+}
+.buttonRowThree{
+
+  display: grid;
+  grid-template-columns: 30px 150px 20px 150px 20px 150px 20px 150px 30px;
+  
+}
+.buttonRowFour{
+
+  display: grid;
+  grid-template-columns: 30px 150px 20px 150px 20px 150px 20px 150px 30px;
+  
+}
+.buttonRowFive{
+
+  display: grid;
+  grid-template-columns: 235px 250px 235px;
+
+}
+#buttonSeven{
+
+  border-style: solid;
+  border-color: rgb(250, 150, 0);
+
+  border-width: 3px 3px 3px 3px;
+  border-radius: 10%;
+
+  color: orange;
+  background-color: rgb(2, 1, 20);
+
+  font-family: 'Creepster', cursive;
+
+  font-size: 30px;
+
+}
+#buttonSeven:hover{
+  
+  border-style: solid;
+  border-color: rgb(255, 198, 113);
+
+  border-width: 3px 3px 3px 3px;
+  border-radius: 10%;
+
+  color: rgb(255, 198, 113);
+  background-color: rgb(2, 1, 20);
+
+  font-family: 'Creepster', cursive;
+
+  font-size: 30px;
+}
+#buttonSevenPressed{
+
+  border-style: solid;
+  border-color: rgb(196, 117, 0);
+
+  border-width: 3px 3px 3px 3px;
+  border-radius: 10%;
+
+  color: rgb(196, 117, 0);
+  background-color: rgb(2, 1, 20);
+
+  font-family: 'Creepster', cursive;
+
+  font-size: 30px;
+
+}
+#buttonEight{
+
+  border-style: solid;
+  border-color: rgb(250, 150, 0);
+
+  border-width: 3px 3px 3px 3px;
+  border-radius: 10%;
+
+  color: orange;
+  background-color: rgb(2, 1, 20);
+
+  font-family: 'Creepster', cursive;
+
+  font-size: 30px;
+
+}
+#buttonEight:hover{
+  
+  border-style: solid;
+  border-color: rgb(255, 198, 113);
+
+  border-width: 3px 3px 3px 3px;
+  border-radius: 10%;
+
+  color: rgb(255, 198, 113);
+  background-color: rgb(2, 1, 20);
+
+  font-family: 'Creepster', cursive;
+
+  font-size: 30px;
+}
+#buttonEightPressed{
+
+  border-style: solid;
+  border-color: rgb(196, 117, 0);
+
+  border-width: 3px 3px 3px 3px;
+  border-radius: 10%;
+
+  color: rgb(196, 117, 0);
+  background-color: rgb(2, 1, 20);
+
+  font-family: 'Creepster', cursive;
+
+  font-size: 30px;
+
+}
+#buttonNine{
+
+  border-style: solid;
+  border-color: rgb(250, 150, 0);
+
+  border-width: 3px 3px 3px 3px;
+  border-radius: 10%;
+
+  color: orange;
+  background-color: rgb(2, 1, 20);
+
+  font-family: 'Creepster', cursive;
+
+  font-size: 30px;
+
+}
+#buttonNine:hover{
+  
+  border-style: solid;
+  border-color: rgb(255, 198, 113);
+
+  border-width: 3px 3px 3px 3px;
+  border-radius: 10%;
+
+  color: rgb(255, 198, 113);
+  background-color: rgb(2, 1, 20);
+
+  font-family: 'Creepster', cursive;
+
+  font-size: 30px;
+}
+#buttonNinePressed{
+
+  border-style: solid;
+  border-color: rgb(196, 117, 0);
+
+  border-width: 3px 3px 3px 3px;
+  border-radius: 10%;
+
+  color: rgb(196, 117, 0);
+  background-color: rgb(2, 1, 20);
+
+  font-family: 'Creepster', cursive;
+
+  font-size: 30px;
+
+}
+#buttonFour{
+
+  border-style: solid;
+  border-color: rgb(250, 150, 0);
+
+  border-width: 3px 3px 3px 3px;
+  border-radius: 10%;
+
+  color: orange;
+  background-color: rgb(2, 1, 20);
+
+  font-family: 'Creepster', cursive;
+
+  font-size: 30px;
+
+}
+#buttonFour:hover{
+  
+  border-style: solid;
+  border-color: rgb(255, 198, 113);
+
+  border-width: 3px 3px 3px 3px;
+  border-radius: 10%;
+
+  color: rgb(255, 198, 113);
+  background-color: rgb(2, 1, 20);
+
+  font-family: 'Creepster', cursive;
+
+  font-size: 30px;
+}
+#buttonFourPressed{
+
+  border-style: solid;
+  border-color: rgb(196, 117, 0);
+
+  border-width: 3px 3px 3px 3px;
+  border-radius: 10%;
+
+  color: rgb(196, 117, 0);
+  background-color: rgb(2, 1, 20);
+
+  font-family: 'Creepster', cursive;
+
+  font-size: 30px;
+
+}
+#buttonFive{
+
+  border-style: solid;
+  border-color: rgb(250, 150, 0);
+
+  border-width: 3px 3px 3px 3px;
+  border-radius: 10%;
+
+  color: orange;
+  background-color: rgb(2, 1, 20);
+
+  font-family: 'Creepster', cursive;
+
+  font-size: 30px;
+
+}
+#buttonFive:hover{
+  
+  border-style: solid;
+  border-color: rgb(255, 198, 113);
+
+  border-width: 3px 3px 3px 3px;
+  border-radius: 10%;
+
+  color: rgb(255, 198, 113);
+  background-color: rgb(2, 1, 20);
+
+  font-family: 'Creepster', cursive;
+
+  font-size: 30px;
+}
+#buttonFivePressed{
+
+  border-style: solid;
+  border-color: rgb(196, 117, 0);
+
+  border-width: 3px 3px 3px 3px;
+  border-radius: 10%;
+
+  color: rgb(196, 117, 0);
+  background-color: rgb(2, 1, 20);
+
+  font-family: 'Creepster', cursive;
+
+  font-size: 30px;
+
+}
+#buttonSix{
+
+  border-style: solid;
+  border-color: rgb(250, 150, 0);
+
+  border-width: 3px 3px 3px 3px;
+  border-radius: 10%;
+
+  color: orange;
+  background-color: rgb(2, 1, 20);
+
+  font-family: 'Creepster', cursive;
+
+  font-size: 30px;
+
+}
+#buttonSix:hover{
+  
+  border-style: solid;
+  border-color: rgb(255, 198, 113);
+
+  border-width: 3px 3px 3px 3px;
+  border-radius: 10%;
+
+  color: rgb(255, 198, 113);
+  background-color: rgb(2, 1, 20);
+
+  font-family: 'Creepster', cursive;
+
+  font-size: 30px;
+}
+#buttonSixPressed{
+
+  border-style: solid;
+  border-color: rgb(196, 117, 0);
+
+  border-width: 3px 3px 3px 3px;
+  border-radius: 10%;
+
+  color: rgb(196, 117, 0);
+  background-color: rgb(2, 1, 20);
+
+  font-family: 'Creepster', cursive;
+
+  font-size: 30px;
+
+}
+#buttonOne{
+
+  border-style: solid;
+  border-color: rgb(250, 150, 0);
+
+  border-width: 3px 3px 3px 3px;
+  border-radius: 10%;
+
+  color: orange;
+  background-color: rgb(2, 1, 20);
+
+  font-family: 'Creepster', cursive;
+
+  font-size: 30px;
+
+}
+#buttonOne:hover{
+  
+  border-style: solid;
+  border-color: rgb(255, 198, 113);
+
+  border-width: 3px 3px 3px 3px;
+  border-radius: 10%;
+
+  color: rgb(255, 198, 113);
+  background-color: rgb(2, 1, 20);
+
+  font-family: 'Creepster', cursive;
+
+  font-size: 30px;
+
+}
+#buttonOnePressed{
+
+  border-style: solid;
+  border-color: rgb(196, 117, 0);
+
+  border-width: 3px 3px 3px 3px;
+  border-radius: 10%;
+
+  color: rgb(196, 117, 0);
+  background-color: rgb(2, 1, 20);
+
+  font-family: 'Creepster', cursive;
+
+  font-size: 30px;
+
+}
+#buttonTwo{
+
+  border-style: solid;
+  border-color: rgb(250, 150, 0);
+
+  border-width: 3px 3px 3px 3px;
+  border-radius: 10%;
+
+  color: orange;
+  background-color: rgb(2, 1, 20);
+
+  font-family: 'Creepster', cursive;
+
+  font-size: 30px;
+
+}
+#buttonTwo:hover{
+  
+  border-style: solid;
+  border-color: rgb(255, 198, 113);
+
+  border-width: 3px 3px 3px 3px;
+  border-radius: 10%;
+
+  color: rgb(255, 198, 113);
+  background-color: rgb(2, 1, 20);
+
+  font-family: 'Creepster', cursive;
+
+  font-size: 30px;
+}
+#buttonTwoPressed{
+
+  border-style: solid;
+  border-color: rgb(196, 117, 0);
+
+  border-width: 3px 3px 3px 3px;
+  border-radius: 10%;
+
+  color: rgb(196, 117, 0);
+  background-color: rgb(2, 1, 20);
+
+  font-family: 'Creepster', cursive;
+
+  font-size: 30px;
+
+}
+#buttonThree{
+
+  border-style: solid;
+  border-color: rgb(250, 150, 0);
+
+  border-width: 3px 3px 3px 3px;
+  border-radius: 10%;
+
+  color: orange;
+  background-color: rgb(2, 1, 20);
+
+  font-family: 'Creepster', cursive;
+
+  font-size: 30px;
+
+}
+#buttonThree:hover{
+  
+  border-style: solid;
+  border-color: rgb(255, 198, 113);
+
+  border-width: 3px 3px 3px 3px;
+  border-radius: 10%;
+
+  color: rgb(255, 198, 113);
+  background-color: rgb(2, 1, 20);
+
+  font-family: 'Creepster', cursive;
+
+  font-size: 30px;
+}
+#buttonThreePressed{
+
+  border-style: solid;
+  border-color: rgb(196, 117, 0);
+
+  border-width: 3px 3px 3px 3px;
+  border-radius: 10%;
+
+  color: rgb(196, 117, 0);
+  background-color: rgb(2, 1, 20);
+
+  font-family: 'Creepster', cursive;
+
+  font-size: 30px;
+
+}
+#buttonZero{
+
+  border-style: solid;
+  border-color: rgb(250, 150, 0);
+
+  border-width: 3px 3px 3px 3px;
+  border-radius: 10%;
+
+  color: orange;
+  background-color: rgb(2, 1, 20);
+
+  font-family: 'Creepster', cursive;
+
+  font-size: 30px;
+
+}
+#buttonZero:hover{
+  
+  border-style: solid;
+  border-color: rgb(255, 198, 113);
+
+  border-width: 3px 3px 3px 3px;
+  border-radius: 10%;
+
+  color: rgb(255, 198, 113);
+  background-color: rgb(2, 1, 20);
+
+  font-family: 'Creepster', cursive;
+
+  font-size: 30px;
+}
+#buttonZeroPressed{
+
+  border-style: solid;
+  border-color: rgb(196, 117, 0);
+
+  border-width: 3px 3px 3px 3px;
+  border-radius: 10%;
+
+  color: rgb(196, 117, 0);
+  background-color: rgb(2, 1, 20);
+
+  font-family: 'Creepster', cursive;
+
+  font-size: 30px;
+
+}
+#buttonDecimal{
+
+  border-style: solid;
+  border-color: rgb(250, 150, 0);
+
+  border-width: 3px 3px 3px 3px;
+  border-radius: 10%;
+
+  color: orange;
+  background-color: rgb(2, 1, 20);
+
+  font-family: 'Creepster', cursive;
+
+  font-size: 30px;
+
+}
+#buttonDecimal:hover{
+  
+  border-style: solid;
+  border-color: rgb(255, 198, 113);
+
+  border-width: 3px 3px 3px 3px;
+  border-radius: 10%;
+
+  color: rgb(255, 198, 113);
+  background-color: rgb(2, 1, 20);
+
+  font-family: 'Creepster', cursive;
+
+  font-size: 30px;
+}
+#buttonDecimalPressed{
+
+  border-style: solid;
+  border-color: rgb(196, 117, 0);
+
+  border-width: 3px 3px 3px 3px;
+  border-radius: 10%;
+
+  color: rgb(196, 117, 0);
+  background-color: rgb(2, 1, 20);
+
+  font-family: 'Creepster', cursive;
+
+  font-size: 30px;
+
+}
+#buttonPlus{
+
+  border-style: solid;
+  border-color: rgba(250, 150, 0, 0.952);
+
+  border-width: 3px 3px 3px 3px;
+  border-radius: 10%;
+
+  color: rgb(0, 0, 0);
+  background-color: rgba(250, 150, 0, 0.952);
+
+  font-family: 'Creepster', cursive;
+
+  font-size: 30px;
+
+}
+#buttonPlus:hover{
+
+  border-style: solid;
+  border-color: rgb(255, 198, 113);;
+
+  border-width: 3px 3px 3px 3px;
+  border-radius: 10%;
+
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 198, 113);;
+
+  font-family: 'Creepster', cursive;
+
+  font-size: 30px;
+
+}
+#buttonPlusPressed{
+
+  border-style: solid;
+  border-color: rgba(206, 123, 0, 0.952);
+
+  border-width: 3px 3px 3px 3px;
+  border-radius: 10%;
+
+  color: rgb(0, 0, 0);
+  background-color: rgba(206, 123, 0, 0.952);
+
+  font-family: 'Creepster', cursive;
+
+  font-size: 30px;
+
+}
+#buttonMinus{
+
+  border-style: solid;
+  border-color: rgba(250, 150, 0, 0.952);
+
+  border-width: 3px 3px 3px 3px;
+  border-radius: 10%;
+
+  color: rgb(0, 0, 0);
+  background-color: rgba(250, 150, 0, 0.952);
+
+  font-family: 'Creepster', cursive;
+
+  font-size: 30px;
+
+}
+#buttonMinus:hover{
+
+  border-style: solid;
+  border-color: rgb(255, 198, 113);;
+
+  border-width: 3px 3px 3px 3px;
+  border-radius: 10%;
+
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 198, 113);;
+
+  font-family: 'Creepster', cursive;
+
+  font-size: 30px;
+
+}
+#buttonMinusPressed{
+
+  border-style: solid;
+  border-color: rgba(206, 123, 0, 0.952);
+
+  border-width: 3px 3px 3px 3px;
+  border-radius: 10%;
+
+  color: rgb(0, 0, 0);
+  background-color: rgba(206, 123, 0, 0.952);
+
+  font-family: 'Creepster', cursive;
+
+  font-size: 30px;
+
+}
+#buttonMultiply{
+
+  border-style: solid;
+  border-color: rgba(250, 150, 0, 0.952);
+
+  border-width: 3px 3px 3px 3px;
+  border-radius: 10%;
+
+  color: rgb(0, 0, 0);
+  background-color: rgba(250, 150, 0, 0.952);
+
+  font-family: 'Creepster', cursive;
+
+  font-size: 30px;
+
+}
+#buttonMultiply:hover{
+
+  border-style: solid;
+  border-color: rgb(255, 198, 113);;
+
+  border-width: 3px 3px 3px 3px;
+  border-radius: 10%;
+
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 198, 113);;
+
+  font-family: 'Creepster', cursive;
+
+  font-size: 30px;
+
+}
+#buttonMultiplyPressed{
+
+  border-style: solid;
+  border-color: rgba(206, 123, 0, 0.952);
+
+  border-width: 3px 3px 3px 3px;
+  border-radius: 10%;
+
+  color: rgb(0, 0, 0);
+  background-color: rgba(206, 123, 0, 0.952);
+
+  font-family: 'Creepster', cursive;
+
+  font-size: 30px;
+
+}
+#buttonDivide{
+
+  border-style: solid;
+  border-color: rgba(250, 150, 0, 0.952);
+
+  border-width: 3px 3px 3px 3px;
+  border-radius: 10%;
+
+  color: rgb(0, 0, 0);
+  background-color: rgba(250, 150, 0, 0.952);
+
+  font-family: 'Creepster', cursive;
+
+  font-size: 30px;
+
+}
+#buttonDivide:hover{
+
+  border-style: solid;
+  border-color: rgb(255, 198, 113);;
+
+  border-width: 3px 3px 3px 3px;
+  border-radius: 10%;
+
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 198, 113);;
+
+  font-family: 'Creepster', cursive;
+
+  font-size: 30px;
+
+}
+#buttonDividePressed{
+
+  border-style: solid;
+  border-color: rgba(206, 123, 0, 0.952);
+
+  border-width: 3px 3px 3px 3px;
+  border-radius: 10%;
+
+  color: rgb(0, 0, 0);
+  background-color: rgba(206, 123, 0, 0.952);
+
+  font-family: 'Creepster', cursive;
+
+  font-size: 30px;
+
+}
+#buttonEquals{
+
+  border-style: solid;
+  border-color: rgba(250, 150, 0, 0.952);
+
+  border-width: 3px 3px 3px 3px;
+  border-radius: 10%;
+
+  color: rgb(0, 0, 0);
+  background-color: rgba(250, 150, 0, 0.952);
+
+  font-family: 'Creepster', cursive;
+
+  font-size: 30px;
+
+}
+#buttonEquals:hover{
+
+  border-style: solid;
+  border-color: rgb(255, 198, 113);;
+
+  border-width: 3px 3px 3px 3px;
+  border-radius: 10%;
+
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 198, 113);;
+
+  font-family: 'Creepster', cursive;
+
+  font-size: 30px;
+
+}
+#buttonEqualsPressed{
+
+  border-style: solid;
+  border-color: rgba(206, 123, 0, 0.952);
+
+  border-width: 3px 3px 3px 3px;
+  border-radius: 10%;
+
+  color: rgb(0, 0, 0);
+  background-color: rgba(206, 123, 0, 0.952);
+
+  font-family: 'Creepster', cursive;
+
+  font-size: 30px;
+
+}
+#buttonClear{
+
+  border-style: solid;
+  border-color: rgba(250, 150, 0, 0.952);
+
+  border-width: 3px 3px 3px 3px;
+  border-radius: 5%;
+
+  color: rgb(0, 0, 0);
+  background-color: rgba(250, 150, 0, 0.952);
+
+  font-family: 'Creepster', cursive;
+
+  font-size: 30px;
+
+}
+#buttonClear:hover{
+
+  border-style: solid;
+  border-color: rgb(255, 198, 113);;
+
+  border-width: 3px 3px 3px 3px;
+  border-radius: 5%;
+
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 198, 113);;
+
+  font-family: 'Creepster', cursive;
+
+  font-size: 30px;
+
+}
+#buttonClearPressed{
+
+  border-style: solid;
+  border-color: rgba(206, 123, 0, 0.952);
+
+  border-width: 3px 3px 3px 3px;
+  border-radius: 5%;
+
+  color: rgb(0, 0, 0);
+  background-color: rgba(206, 123, 0, 0.952);
+
+  font-family: 'Creepster', cursive;
+
+  font-size: 30px;
+
+}
