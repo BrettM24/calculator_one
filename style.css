@@ -109,7 +109,7 @@
 .buttonRowFive{
 
   display: grid;
-  grid-template-columns: 235px 250px 235px;
+  grid-template-columns: 235px 250px 80px 100px 55px;
 
 }
 #buttonSeven{
@@ -903,6 +903,60 @@
 
 }
 #buttonClearPressed{
+
+  border-style: solid;
+  border-color: rgba(206, 123, 0, 0.952);
+
+  border-width: 3px 3px 3px 3px;
+  border-radius: 5%;
+
+  color: rgb(0, 0, 0);
+  background-color: rgba(206, 123, 0, 0.952);
+
+  font-family: 'Creepster', cursive;
+
+  font-size: 30px;
+
+}
+#columnDelete{
+
+  display: grid;
+  grid-template-rows: 10px 60px 10px;
+
+}
+#buttonDelete{
+
+  border-style: solid;
+  border-color: rgba(250, 150, 0, 0.952);
+
+  border-width: 3px 3px 3px 3px;
+  border-radius: 5%;
+
+  color: rgb(0, 0, 0);
+  background-color: rgba(250, 150, 0, 0.952);
+
+  font-family: 'Creepster', cursive;
+
+  font-size: 30px;
+
+}
+#buttonDelete:hover{
+
+  border-style: solid;
+  border-color: rgb(255, 198, 113);;
+
+  border-width: 3px 3px 3px 3px;
+  border-radius: 5%;
+
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 198, 113);;
+
+  font-family: 'Creepster', cursive;
+
+  font-size: 30px;
+
+}
+#buttonDeletePressed{
 
   border-style: solid;
   border-color: rgba(206, 123, 0, 0.952);
