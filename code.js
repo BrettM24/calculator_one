@@ -103,13 +103,14 @@ function checkDigitAfterDecimal(currentNumber, n){ //n is passed through from de
 
 };
 
-function operate(){
+function operate(){ //#5
 
   let answerScreen = document.querySelector(".answerScreen");
   let inputScreen = document.querySelector(".inputScreen");
   let inputArray = inputScreen.textContent.split("");
   let storeArray = [];
 
+  //#5.1
   for(let n = 0; n < inputArray.length; n++){
 
     if(inputArray[n] == " "){
@@ -119,7 +120,9 @@ function operate(){
     };
 
   };
+  //#5.1
 
+  //#5.2
   if(storeArray.length == 0){
 
     answerScreen.textContent = inputScreen.textContent;
@@ -158,6 +161,7 @@ function operate(){
     inputScreen.textContent = numAnswer;
 
   };
+  //#5.2
 
 };
 
@@ -251,6 +255,10 @@ buttonOne.addEventListener("mousedown", () =>{
 
   let arrayNumStore = currentNumber();
 
+  console.log(arrayNumStore[0].length);
+
+  console.log(arrayNumStore[0][arrayNumStore.length - 1]);
+
   let numLength = lengthDetermine(arrayNumStore[0]);
 
   let decimalChecker = decimalCheck(arrayNumStore[0]);
@@ -268,6 +276,10 @@ buttonOne.addEventListener("mousedown", () =>{
         
         inputScreen.textContent = "1";
     
+      }else if(arrayNumStore[0][arrayNumStore[0].length - 1] == 0 && arrayNumStore[0].length == 1){
+
+        console.log("Hey, cannot have a digit after a zero");
+
       }else{
         
         inputScreen.textContent = (inputScreen.textContent + "1");
@@ -343,6 +355,10 @@ buttonTwo.addEventListener("mousedown", () =>{
         
         inputScreen.textContent = "2";
     
+      }else if(arrayNumStore[0][arrayNumStore[0].length - 1] == 0 && arrayNumStore[0].length == 1){
+
+        console.log("Hey, cannot have a digit after a zero");
+
       }else{
         
         inputScreen.textContent = (inputScreen.textContent + "2");
@@ -411,6 +427,10 @@ buttonThree.addEventListener("mousedown", () =>{
         
         inputScreen.textContent = "3";
     
+      }else if(arrayNumStore[0][arrayNumStore[0].length - 1] == 0 && arrayNumStore[0].length == 1){
+
+        console.log("Hey, cannot have a digit after a zero");
+      
       }else{
         
         inputScreen.textContent = (inputScreen.textContent + "3");
@@ -479,6 +499,10 @@ buttonFour.addEventListener("mousedown", () =>{
         
         inputScreen.textContent = "4";
     
+      }else if(arrayNumStore[0][arrayNumStore[0].length - 1] == 0 && arrayNumStore[0].length == 1){
+
+        console.log("Hey, cannot have a digit after a zero");
+
       }else{
         
         inputScreen.textContent = (inputScreen.textContent + "4");
@@ -547,6 +571,10 @@ buttonFive.addEventListener("mousedown", () =>{
         
         inputScreen.textContent = "5";
     
+      }else if(arrayNumStore[0][arrayNumStore[0].length - 1] == 0 && arrayNumStore[0].length == 1){
+
+        console.log("Hey, cannot have a digit after a zero");
+
       }else{
         
         inputScreen.textContent = (inputScreen.textContent + "5");
@@ -616,6 +644,10 @@ buttonSix.addEventListener("mousedown", () =>{
         
         inputScreen.textContent = "6";
     
+      }else if(arrayNumStore[0][arrayNumStore[0].length - 1] == 0 && arrayNumStore[0].length == 1){
+
+        console.log("Hey, cannot have a digit after a zero");
+
       }else{
         
         inputScreen.textContent = (inputScreen.textContent + "6");
@@ -685,6 +717,10 @@ buttonSeven.addEventListener("mousedown", () =>{
         
         inputScreen.textContent = "7";
     
+      }else if(arrayNumStore[0][arrayNumStore[0].length - 1] == 0 && arrayNumStore[0].length == 1){
+
+        console.log("Hey, cannot have a digit after a zero");
+
       }else{
         
         inputScreen.textContent = (inputScreen.textContent + "7");
@@ -754,6 +790,10 @@ buttonEight.addEventListener("mousedown", () =>{
         
         inputScreen.textContent = "8";
     
+      }else if(arrayNumStore[0][arrayNumStore[0].length - 1] == 0 && arrayNumStore[0].length == 1){
+
+        console.log("Hey, cannot have a digit after a zero");
+
       }else{
         
         inputScreen.textContent = (inputScreen.textContent + "8");
@@ -823,6 +863,10 @@ buttonNine.addEventListener("mousedown", () =>{
         
         inputScreen.textContent = "9";
     
+      }else if(arrayNumStore[0][arrayNumStore[0].length - 1] == 0 && arrayNumStore[0].length == 1){
+
+        console.log("Hey, cannot have a digit after a zero");
+
       }else{
         
         inputScreen.textContent = (inputScreen.textContent + "9");
@@ -891,6 +935,10 @@ buttonZero.addEventListener("mousedown", () =>{
         
         inputScreen.textContent = "0";
   
+      }else if(arrayNumStore[0][arrayNumStore[0].length - 1] == 0 && arrayNumStore[0].length == 1){
+
+        console.log("Hey, cannot have a digit after a zero");
+
       }else{
         
         inputScreen.textContent = (inputScreen.textContent + "0");
@@ -926,6 +974,7 @@ buttonZero.addEventListener("mouseup", () => {
 const buttonDecimal = document.querySelector("#buttonDecimal");
 buttonDecimal.addEventListener("mousedown", () => {
 
+  //#1
   const inputScreenIDCheck = document.querySelector(".inputScreen");
   const answerScreenIDCheck = document.querySelector(".answerScreen");
 
@@ -938,8 +987,10 @@ buttonDecimal.addEventListener("mousedown", () => {
     inputScreenIDCheck.textContent = "_";
 
   };
+  //#1
 
-  buttonDecimal.setAttribute("id", "buttonDecimalPressed");
+  //#3
+  buttonDecimal.setAttribute("id", "buttonDecimalPressed");//#a
 
   let arrayNumStore = currentNumber();
 
@@ -951,11 +1002,9 @@ buttonDecimal.addEventListener("mousedown", () => {
 
   }else{
 
-    //If a decimal is pressed, if nothing yet in place then will place a zero first and then a decimal 
     const inputScreen = document.querySelector(".inputScreen");
   
     if(arrayNumStore[0].length == 0){
-    //if second number is empty or if first number is "_", input 0 and then decimal.
   
       inputScreen.textContent += "0.";
   
@@ -974,12 +1023,13 @@ buttonDecimal.addEventListener("mousedown", () => {
     };
 
   };
+  //#3
   
 });
 
 buttonDecimal.addEventListener("mouseup", () => {
 
-  buttonDecimal.setAttribute("id", "buttonDecimal");
+  buttonDecimal.setAttribute("id", "buttonDecimal"); //#a
           
 });
 
@@ -991,6 +1041,7 @@ buttonDelete.addEventListener("mousedown", () => {
   let inputScreen = document.querySelector(".inputScreen");
   //let answerScreen = document.querySelector(".answerScreen")
 
+  //#7
   if(inputScreen.id == "input"){
     
     if(inputScreen.textContent == "ANSWER TOO LONG"){
@@ -1004,9 +1055,8 @@ buttonDelete.addEventListener("mousedown", () => {
 
       let inputString = "";
 
+      //#7.1
       if(inputArray[inputArrayLength - 1] == " "){
-
-        console.log("Hey There");
 
         inputArray.pop();
         inputArray.pop();
@@ -1019,7 +1069,9 @@ buttonDelete.addEventListener("mousedown", () => {
           inputString += inputArray[m];
   
         };
-
+      //#7.1
+      
+      //#7.2
       }else{
   
         inputArray.pop();
@@ -1033,7 +1085,9 @@ buttonDelete.addEventListener("mousedown", () => {
         };
   
       };
-  
+      //#7.2
+
+      //#7.3
       if(inputString.length < 1){
   
         inputScreen.textContent = "_";
@@ -1043,10 +1097,12 @@ buttonDelete.addEventListener("mousedown", () => {
         inputScreen.textContent = inputString;
   
       };
+      //#7.3
   
     };  
   
   };
+  //#7
 
 });
 
@@ -1065,6 +1121,7 @@ buttonClear.addEventListener("mousedown", () =>{
   const inputScreenIDCheck = document.querySelector(".inputScreen");
   const answerScreenIDCheck = document.querySelector(".answerScreen");
 
+  //#1
   if(inputScreenIDCheck.id == "answer"){
 
     inputScreenIDCheck.setAttribute("id", "input");
@@ -1073,6 +1130,9 @@ buttonClear.addEventListener("mousedown", () =>{
 
     inputScreenIDCheck.textContent = "_";
 
+  //#1
+
+  //#6
   }else{    
     
     const inputScreen = document.querySelector(".inputScreen");
@@ -1088,6 +1148,7 @@ buttonClear.addEventListener("mousedown", () =>{
     };
 
   };
+  //#6
   
 });
 
@@ -1105,6 +1166,7 @@ buttonEquals.addEventListener("mousedown", () => {
   const inputScreenIDCheck = document.querySelector(".inputScreen");
   const answerScreenIDCheck = document.querySelector(".answerScreen");
 
+  //#1
   if(inputScreenIDCheck.id == "answer"){
 
     inputScreenIDCheck.setAttribute("id", "input");
@@ -1113,11 +1175,14 @@ buttonEquals.addEventListener("mousedown", () => {
 
     inputScreenIDCheck.textContent = "_";
 
+  //#1
+
   }else{
 
+  //#5
     if(inputScreenIDCheck.textContent == "_" || inputScreenIDCheck.textContent == "ANSWER TOO LONG"){
 
-      console.log("Nice");
+      console.log("Nice"); //Nothing is done
     
     }else{
 
@@ -1133,6 +1198,8 @@ buttonEquals.addEventListener("mousedown", () => {
 
     };
 
+  //#5
+
   };
 
 });
@@ -1147,6 +1214,7 @@ buttonEquals.addEventListener("mouseup", () => {
 const buttonPlus = document.querySelector("#buttonPlus");
 buttonPlus.addEventListener("mousedown", () =>{
 
+  //#4.3
   const inputScreenIDCheck = document.querySelector(".inputScreen");
   const answerScreenIDCheck = document.querySelector(".answerScreen");
 
@@ -1156,57 +1224,73 @@ buttonPlus.addEventListener("mousedown", () =>{
 
     answerScreenIDCheck.textContent = inputScreenIDCheck.textContent;
 
-    inputScreenIDCheck.textContent = "_";
+    if(inputScreenIDCheck.textContent.length > 8){
 
-  };
+      inputScreenIDCheck.textContent = "ANSWER TOO LONG";
 
-  buttonPlus.setAttribute("id", "buttonPlusPressed");
+    }else{
 
-  let arrayNumStore = currentNumber();
-  
-  const inputScreen = document.querySelector(".inputScreen");
-  
-  if(inputScreen.textContent == "_" || inputScreen.textContent == "ANSWER TOO LONG"){
-    
-    inputScreen.textContent = "0 + ";
+      inputScreenIDCheck.textContent += " + ";
 
-  }else if(arrayNumStore[1].length == 2){
-
-    let operateValid = operateValidityCheck();
-      
-    if(operateValid == true){
-    
-      operate();
-
-      if(inputScreen.textContent.length > 8){
-
-        answerScreenIDCheck.textContent = inputScreen.textContent;
-
-        inputScreen.textContent = "ANSWER TOO LONG";
-
-      }else{
-          
-        inputScreen.textContent += " + ";
-        
-      };
-        
     };
 
   }else{
+  //#4.3
 
-    let inputArray = inputScreen.textContent.split("");
-
-    if(inputArray[inputArray.length - 1] == "."){
-
-      inputScreen.textContent = (inputScreen.textContent + "0 + ");
-
-    }else{
+    //#4
+    buttonPlus.setAttribute("id", "buttonPlusPressed");
+  
+    let arrayNumStore = currentNumber();
+    
+    const inputScreen = document.querySelector(".inputScreen");
+    
+    if(inputScreen.textContent == "_" || inputScreen.textContent == "ANSWER TOO LONG"){
       
-      inputScreen.textContent = (inputScreen.textContent + " + ");
+      inputScreen.textContent = "0 + ";
     
+    //#4.1
+    }else if(arrayNumStore[1].length == 2){
+  
+      let operateValid = operateValidityCheck();
+        
+      if(operateValid == true){
+      
+        operate();
+  
+        if(inputScreen.textContent.length > 8){
+  
+          answerScreenIDCheck.textContent = inputScreen.textContent;
+  
+          inputScreen.textContent = "ANSWER TOO LONG";
+  
+        }else{
+            
+          inputScreen.textContent += " + ";
+          
+        };
+          
+      };
+    //#4.1
+  
+    //#4.2
+    }else{
+  
+      let inputArray = inputScreen.textContent.split("");
+  
+      if(inputArray[inputArray.length - 1] == "."){
+  
+        inputScreen.textContent = (inputScreen.textContent + "0 + ");
+  
+      }else{
+        
+        inputScreen.textContent = (inputScreen.textContent + " + ");
+      
+      };
+      
     };
-    
+    //#4.2
   };
+  //#4
   
 });
 
@@ -1229,58 +1313,68 @@ buttonMinus.addEventListener("mousedown", () =>{
 
     answerScreenIDCheck.textContent = inputScreenIDCheck.textContent;
 
-    inputScreenIDCheck.textContent = "_";
+    if(inputScreenIDCheck.textContent.length > 8){
 
-  };
+      inputScreenIDCheck.textContent = "ANSWER TOO LONG";
 
-  buttonMinus.setAttribute("id", "buttonMinusPressed");
+    }else{
 
-  let arrayNumStore = currentNumber();
-  
-  const inputScreen = document.querySelector(".inputScreen");
-  
-  if(inputScreen.textContent == "_" || inputScreen.textContent == "ANSWER TOO LONG"){
-    
-    inputScreen.textContent = "0 - ";
+      inputScreenIDCheck.textContent += " - ";
 
-  }else if(arrayNumStore[1].length == 2){
-
-    let operateValid = operateValidityCheck();
-      
-    if(operateValid == true){
-    
-      operate();
-
-      if(inputScreen.textContent.length > 8){
-
-        answerScreenIDCheck.textContent = inputScreen.textContent;
-
-        inputScreen.textContent = "ANSWER TOO LONG";
-
-      }else{
-          
-        inputScreen.textContent += " - ";
-        
-      };
-        
     };
 
   }else{
+
+    buttonMinus.setAttribute("id", "buttonMinusPressed");
+  
+    let arrayNumStore = currentNumber();
     
-    let inputArray = inputScreen.textContent.split("");
-
-    if(inputArray[inputArray.length - 1] == "."){
-
-      inputScreen.textContent = (inputScreen.textContent + "0 - ");
-
+    const inputScreen = document.querySelector(".inputScreen");
+    
+    if(inputScreen.textContent == "_" || inputScreen.textContent == "ANSWER TOO LONG"){
+      
+      inputScreen.textContent = "0 - ";
+  
+    }else if(arrayNumStore[1].length == 2){
+  
+      let operateValid = operateValidityCheck();
+        
+      if(operateValid == true){
+      
+        operate();
+  
+        if(inputScreen.textContent.length > 8){
+  
+          answerScreenIDCheck.textContent = inputScreen.textContent;
+  
+          inputScreen.textContent = "ANSWER TOO LONG";
+  
+        }else{
+            
+          inputScreen.textContent += " - ";
+          
+        };
+          
+      };
+  
     }else{
       
-      inputScreen.textContent = (inputScreen.textContent + " - ");
-    
+      let inputArray = inputScreen.textContent.split("");
+  
+      if(inputArray[inputArray.length - 1] == "."){
+  
+        inputScreen.textContent = (inputScreen.textContent + "0 - ");
+  
+      }else{
+        
+        inputScreen.textContent = (inputScreen.textContent + " - ");
+      
+      };
+  
     };
 
   };
-  
+    
 });
 
 buttonMinus.addEventListener("mouseup", () => {
@@ -1302,58 +1396,68 @@ buttonMultiply.addEventListener("mousedown", () =>{
 
     answerScreenIDCheck.textContent = inputScreenIDCheck.textContent;
 
-    inputScreenIDCheck.textContent = "_";
+    if(inputScreenIDCheck.textContent.length > 8){
 
-  };
+      inputScreenIDCheck.textContent = "ANSWER TOO LONG";
 
-  buttonMultiply.setAttribute("id", "buttonMultiplyPressed");
+    }else{
 
-  let arrayNumStore = currentNumber();
-  
-  const inputScreen = document.querySelector(".inputScreen");
-  
-  if(inputScreen.textContent == "_" || inputScreen.textContent == "ANSWER TOO LONG"){
-    
-    inputScreen.textContent = "0 x ";
+      inputScreenIDCheck.textContent += " x ";
 
-  }else if(arrayNumStore[1].length == 2){
-
-    let operateValid = operateValidityCheck();
-      
-    if(operateValid == true){
-    
-      operate();
-
-      if(inputScreen.textContent.length > 8){
-
-        answerScreenIDCheck.textContent = inputScreen.textContent;
-
-        inputScreen.textContent = "ANSWER TOO LONG";
-
-      }else{
-          
-        inputScreen.textContent += " x ";
-        
-      };
-        
     };
 
   }else{
+
+    buttonMultiply.setAttribute("id", "buttonMultiplyPressed");
+  
+    let arrayNumStore = currentNumber();
     
-    let inputArray = inputScreen.textContent.split("");
-
-    if(inputArray[inputArray.length - 1] == "."){
-
-      inputScreen.textContent = (inputScreen.textContent + "0 x ");
-
+    const inputScreen = document.querySelector(".inputScreen");
+    
+    if(inputScreen.textContent == "_" || inputScreen.textContent == "ANSWER TOO LONG"){
+      
+      inputScreen.textContent = "0 x ";
+  
+    }else if(arrayNumStore[1].length == 2){
+  
+      let operateValid = operateValidityCheck();
+        
+      if(operateValid == true){
+      
+        operate();
+  
+        if(inputScreen.textContent.length > 8){
+  
+          answerScreenIDCheck.textContent = inputScreen.textContent;
+  
+          inputScreen.textContent = "ANSWER TOO LONG";
+  
+        }else{
+            
+          inputScreen.textContent += " x ";
+          
+        };
+          
+      };
+  
     }else{
       
-      inputScreen.textContent = (inputScreen.textContent + " x ");
-    
+      let inputArray = inputScreen.textContent.split("");
+  
+      if(inputArray[inputArray.length - 1] == "."){
+  
+        inputScreen.textContent = (inputScreen.textContent + "0 x ");
+  
+      }else{
+        
+        inputScreen.textContent = (inputScreen.textContent + " x ");
+      
+      };
+  
     };
 
   };
-  
+    
 });
 
 buttonMultiply.addEventListener("mouseup", () => {
@@ -1375,58 +1479,68 @@ buttonDivide.addEventListener("mousedown", () =>{
 
     answerScreenIDCheck.textContent = inputScreenIDCheck.textContent;
 
-    inputScreenIDCheck.textContent = "_";
+    if(inputScreenIDCheck.textContent.length > 8){
 
-  };
+      inputScreenIDCheck.textContent = "ANSWER TOO LONG";
 
-  buttonDivide.setAttribute("id", "buttonDividePressed");
+    }else{
 
-  let arrayNumStore = currentNumber();
-  
-  const inputScreen = document.querySelector(".inputScreen");
-  
-  if(inputScreen.textContent == "_" || inputScreen.textContent == "ANSWER TOO LONG"){
-    
-    inputScreen.textContent = "0 / ";
+      inputScreenIDCheck.textContent += " / ";
 
-  }else if(arrayNumStore[1].length == 2){
-
-    let operateValid = operateValidityCheck();
-      
-    if(operateValid == true){
-    
-      operate();
-
-      if(inputScreen.textContent.length > 8){
-
-        answerScreenIDCheck.textContent = inputScreen.textContent;
-
-        inputScreen.textContent = "ANSWER TOO LONG";
-
-      }else{
-          
-        inputScreen.textContent += " / ";
-        
-      };
-        
     };
 
   }else{
+
+    buttonDivide.setAttribute("id", "buttonDividePressed");
+  
+    let arrayNumStore = currentNumber();
     
-    let inputArray = inputScreen.textContent.split("");
-
-    if(inputArray[inputArray.length - 1] == "."){
-
-      inputScreen.textContent = (inputScreen.textContent + "0 / ");
-
+    const inputScreen = document.querySelector(".inputScreen");
+    
+    if(inputScreen.textContent == "_" || inputScreen.textContent == "ANSWER TOO LONG"){
+      
+      inputScreen.textContent = "0 / ";
+  
+    }else if(arrayNumStore[1].length == 2){
+  
+      let operateValid = operateValidityCheck();
+        
+      if(operateValid == true){
+      
+        operate();
+  
+        if(inputScreen.textContent.length > 8){
+  
+          answerScreenIDCheck.textContent = inputScreen.textContent;
+  
+          inputScreen.textContent = "ANSWER TOO LONG";
+  
+        }else{
+            
+          inputScreen.textContent += " / ";
+          
+        };
+          
+      };
+  
     }else{
       
-      inputScreen.textContent = (inputScreen.textContent + " / ");
-    
+      let inputArray = inputScreen.textContent.split("");
+  
+      if(inputArray[inputArray.length - 1] == "."){
+  
+        inputScreen.textContent = (inputScreen.textContent + "0 / ");
+  
+      }else{
+        
+        inputScreen.textContent = (inputScreen.textContent + " / ");
+      
+      };
+  
     };
 
   };
-  
+    
 });
 
 buttonDivide.addEventListener("mouseup", () => {
@@ -1476,6 +1590,10 @@ window.addEventListener("keydown", (e) => {
           
           inputScreen.textContent = "1";
       
+        }else if(arrayNumStore[0][arrayNumStore[0].length - 1] == 0 && arrayNumStore[0].length == 1){
+
+          console.log("Hey, cannot have a digit after a zero");
+  
         }else{
           
           inputScreen.textContent = (inputScreen.textContent + "1");
@@ -1541,6 +1659,10 @@ window.addEventListener("keydown", (e) => {
           
           inputScreen.textContent = "2";
       
+        }else if(arrayNumStore[0][arrayNumStore[0].length - 1] == 0 && arrayNumStore[0].length == 1){
+
+          console.log("Hey, cannot have a digit after a zero");
+  
         }else{
           
           inputScreen.textContent = (inputScreen.textContent + "2");
@@ -1606,6 +1728,10 @@ window.addEventListener("keydown", (e) => {
           
           inputScreen.textContent = "3";
       
+        }else if(arrayNumStore[0][arrayNumStore[0].length - 1] == 0 && arrayNumStore[0].length == 1){
+
+          console.log("Hey, cannot have a digit after a zero");
+  
         }else{
           
           inputScreen.textContent = (inputScreen.textContent + "3");
@@ -1671,6 +1797,10 @@ window.addEventListener("keydown", (e) => {
           
           inputScreen.textContent = "4";
       
+        }else if(arrayNumStore[0][arrayNumStore[0].length - 1] == 0 && arrayNumStore[0].length == 1){
+
+          console.log("Hey, cannot have a digit after a zero");
+  
         }else{
           
           inputScreen.textContent = (inputScreen.textContent + "4");
@@ -1736,6 +1866,10 @@ window.addEventListener("keydown", (e) => {
           
           inputScreen.textContent = "5";
       
+        }else if(arrayNumStore[0][arrayNumStore[0].length - 1] == 0 && arrayNumStore[0].length == 1){
+
+          console.log("Hey, cannot have a digit after a zero");
+  
         }else{
           
           inputScreen.textContent = (inputScreen.textContent + "5");
@@ -1801,6 +1935,10 @@ window.addEventListener("keydown", (e) => {
           
           inputScreen.textContent = "6";
       
+        }else if(arrayNumStore[0][arrayNumStore[0].length - 1] == 0 && arrayNumStore[0].length == 1){
+
+          console.log("Hey, cannot have a digit after a zero");
+  
         }else{
           
           inputScreen.textContent = (inputScreen.textContent + "6");
@@ -1866,6 +2004,10 @@ window.addEventListener("keydown", (e) => {
           
           inputScreen.textContent = "7";
       
+        }else if(arrayNumStore[0][arrayNumStore[0].length - 1] == 0 && arrayNumStore[0].length == 1){
+
+          console.log("Hey, cannot have a digit after a zero");
+  
         }else{
           
           inputScreen.textContent = (inputScreen.textContent + "7");
@@ -1931,6 +2073,10 @@ window.addEventListener("keydown", (e) => {
           
           inputScreen.textContent = "8";
       
+        }else if(arrayNumStore[0][arrayNumStore[0].length - 1] == 0 && arrayNumStore[0].length == 1){
+
+          console.log("Hey, cannot have a digit after a zero");
+  
         }else{
           
           inputScreen.textContent = (inputScreen.textContent + "8");
@@ -1996,6 +2142,10 @@ window.addEventListener("keydown", (e) => {
           
           inputScreen.textContent = "9";
       
+        }else if(arrayNumStore[0][arrayNumStore[0].length - 1] == 0 && arrayNumStore[0].length == 1){
+
+          console.log("Hey, cannot have a digit after a zero");
+  
         }else{
           
           inputScreen.textContent = (inputScreen.textContent + "9");
@@ -2061,6 +2211,10 @@ window.addEventListener("keydown", (e) => {
           
           inputScreen.textContent = "0";
     
+        }else if(arrayNumStore[0][arrayNumStore[0].length - 1] == 0 && arrayNumStore[0].length == 1){
+
+          console.log("Hey, cannot have a digit after a zero");
+  
         }else{
           
           inputScreen.textContent = (inputScreen.textContent + "0");
@@ -2240,56 +2394,66 @@ window.addEventListener("keydown", (e) => {
   
       answerScreenIDCheck.textContent = inputScreenIDCheck.textContent;
   
-      inputScreenIDCheck.textContent = "_";
-  
-    };
+      if(inputScreenIDCheck.textContent.length > 8){
 
-    buttonPlus.setAttribute("id", "buttonPlusPressed");
-
-    let arrayNumStore = currentNumber();
-    
-    const inputScreen = document.querySelector(".inputScreen");
-    
-    if(inputScreen.textContent == "_" || inputScreen.textContent == "ANSWER TOO LONG"){
-      
-      inputScreen.textContent = "0 + ";
+        inputScreenIDCheck.textContent = "ANSWER TOO LONG";
   
-    }else if(arrayNumStore[1].length == 2){
+      }else{
   
-      let operateValid = operateValidityCheck();
-      
-      if(operateValid == true){
-      
-        operate();
+        inputScreenIDCheck.textContent += " + ";
   
-        if(inputScreen.textContent.length > 8){
-  
-          answerScreenIDCheck.textContent = inputScreen.textContent;
-  
-          inputScreen.textContent = "ANSWER TOO LONG";
-  
-        }else{
-            
-          inputScreen.textContent += " + ";
-          
-        };
-          
       };
   
     }else{
+
+      buttonPlus.setAttribute("id", "buttonPlusPressed");
   
-      let inputArray = inputScreen.textContent.split("");
-  
-      if(inputArray[inputArray.length - 1] == "."){
-  
-        inputScreen.textContent = (inputScreen.textContent + "0 + ");
-  
-      }else{
+      let arrayNumStore = currentNumber();
+      
+      const inputScreen = document.querySelector(".inputScreen");
+      
+      if(inputScreen.textContent == "_" || inputScreen.textContent == "ANSWER TOO LONG"){
         
-        inputScreen.textContent = (inputScreen.textContent + " + ");
-      
+        inputScreen.textContent = "0 + ";
+    
+      }else if(arrayNumStore[1].length == 2){
+    
+        let operateValid = operateValidityCheck();
+        
+        if(operateValid == true){
+        
+          operate();
+    
+          if(inputScreen.textContent.length > 8){
+    
+            answerScreenIDCheck.textContent = inputScreen.textContent;
+    
+            inputScreen.textContent = "ANSWER TOO LONG";
+    
+          }else{
+              
+            inputScreen.textContent += " + ";
+            
+          };
+            
+        };
+    
+      }else{
+    
+        let inputArray = inputScreen.textContent.split("");
+    
+        if(inputArray[inputArray.length - 1] == "."){
+    
+          inputScreen.textContent = (inputScreen.textContent + "0 + ");
+    
+        }else{
+          
+          inputScreen.textContent = (inputScreen.textContent + " + ");
+        
+        };
+        
       };
-      
+
     };
 
     window.addEventListener('keyup', () => {
@@ -2309,56 +2473,66 @@ window.addEventListener("keydown", (e) => {
   
       answerScreenIDCheck.textContent = inputScreenIDCheck.textContent;
   
-      inputScreenIDCheck.textContent = "_";
-  
-    };
+      if(inputScreenIDCheck.textContent.length > 8){
 
-    buttonMinus.setAttribute("id", "buttonMinusPressed");
-
-    let arrayNumStore = currentNumber();
-    
-    const inputScreen = document.querySelector(".inputScreen");
-    
-    if(inputScreen.textContent == "_" ){
-    
-      inputScreen.textContent = "0 - ";
+        inputScreenIDCheck.textContent = "ANSWER TOO LONG";
   
-    }else if(arrayNumStore[1].length == 2){
+      }else{
   
-      let operateValid = operateValidityCheck();
-      
-      if(operateValid == true){
-      
-        operate();
+        inputScreenIDCheck.textContent += " - ";
   
-        if(inputScreen.textContent.length > 8){
-  
-          answerScreenIDCheck.textContent = inputScreen.textContent;
-  
-          inputScreen.textContent = "ANSWER TOO LONG";
-  
-        }else{
-            
-          inputScreen.textContent += " - ";
-          
-        };
-          
       };
   
     }else{
+
+      buttonMinus.setAttribute("id", "buttonMinusPressed");
+  
+      let arrayNumStore = currentNumber();
       
-      let inputArray = inputScreen.textContent.split("");
-  
-      if(inputArray[inputArray.length - 1] == "."){
-  
-        inputScreen.textContent = (inputScreen.textContent + "0 - ");
-  
+      const inputScreen = document.querySelector(".inputScreen");
+      
+      if(inputScreen.textContent == "_" ){
+      
+        inputScreen.textContent = "0 - ";
+    
+      }else if(arrayNumStore[1].length == 2){
+    
+        let operateValid = operateValidityCheck();
+        
+        if(operateValid == true){
+        
+          operate();
+    
+          if(inputScreen.textContent.length > 8){
+    
+            answerScreenIDCheck.textContent = inputScreen.textContent;
+    
+            inputScreen.textContent = "ANSWER TOO LONG";
+    
+          }else{
+              
+            inputScreen.textContent += " - ";
+            
+          };
+            
+        };
+    
       }else{
         
-        inputScreen.textContent = (inputScreen.textContent + " - ");
-      
+        let inputArray = inputScreen.textContent.split("");
+    
+        if(inputArray[inputArray.length - 1] == "."){
+    
+          inputScreen.textContent = (inputScreen.textContent + "0 - ");
+    
+        }else{
+          
+          inputScreen.textContent = (inputScreen.textContent + " - ");
+        
+        };
+    
       };
-  
+
     };
 
     window.addEventListener('keyup', () => {
@@ -2378,56 +2552,66 @@ window.addEventListener("keydown", (e) => {
   
       answerScreenIDCheck.textContent = inputScreenIDCheck.textContent;
   
-      inputScreenIDCheck.textContent = "_";
-  
-    };
+      if(inputScreenIDCheck.textContent.length > 8){
 
-    buttonMultiply.setAttribute("id", "buttonMultiplyPressed");
-
-    let arrayNumStore = currentNumber();
-    
-    const inputScreen = document.querySelector(".inputScreen");
-    
-    if(inputScreen.textContent == "_" || inputScreen.textContent == "ANSWER TOO LONG"){
-    
-      inputScreen.textContent = "0 x ";
+        inputScreenIDCheck.textContent = "ANSWER TOO LONG";
   
-    }else if(arrayNumStore[1].length == 2){
+      }else{
   
-      let operateValid = operateValidityCheck();
-      
-      if(operateValid == true){
-      
-        operate();
+        inputScreenIDCheck.textContent += " x ";
   
-        if(inputScreen.textContent.length > 8){
-  
-          answerScreenIDCheck.textContent = inputScreen.textContent;
-  
-          inputScreen.textContent = "ANSWER TOO LONG";
-  
-        }else{
-            
-          inputScreen.textContent += " * ";
-          
-        };
-          
       };
   
     }else{
+
+      buttonMultiply.setAttribute("id", "buttonMultiplyPressed");
+  
+      let arrayNumStore = currentNumber();
       
-      let inputArray = inputScreen.textContent.split("");
-  
-      if(inputArray[inputArray.length - 1] == "."){
-  
-        inputScreen.textContent = (inputScreen.textContent + "0 x ");
-  
+      const inputScreen = document.querySelector(".inputScreen");
+      
+      if(inputScreen.textContent == "_" || inputScreen.textContent == "ANSWER TOO LONG"){
+      
+        inputScreen.textContent = "0 x ";
+    
+      }else if(arrayNumStore[1].length == 2){
+    
+        let operateValid = operateValidityCheck();
+        
+        if(operateValid == true){
+        
+          operate();
+    
+          if(inputScreen.textContent.length > 8){
+    
+            answerScreenIDCheck.textContent = inputScreen.textContent;
+    
+            inputScreen.textContent = "ANSWER TOO LONG";
+    
+          }else{
+              
+            inputScreen.textContent += " * ";
+            
+          };
+            
+        };
+    
       }else{
         
-        inputScreen.textContent = (inputScreen.textContent + " x ");
-      
+        let inputArray = inputScreen.textContent.split("");
+    
+        if(inputArray[inputArray.length - 1] == "."){
+    
+          inputScreen.textContent = (inputScreen.textContent + "0 x ");
+    
+        }else{
+          
+          inputScreen.textContent = (inputScreen.textContent + " x ");
+        
+        };
+    
       };
-  
+
     };
 
     window.addEventListener('keyup', () => {
@@ -2447,56 +2631,66 @@ window.addEventListener("keydown", (e) => {
   
       answerScreenIDCheck.textContent = inputScreenIDCheck.textContent;
   
-      inputScreenIDCheck.textContent = "_";
-  
-    };
+      if(inputScreenIDCheck.textContent.length > 8){
 
-    buttonDivide.setAttribute("id", "buttonDividePressed");
-
-    let arrayNumStore = currentNumber();
-    
-    const inputScreen = document.querySelector(".inputScreen");
-    
-    if(inputScreen.textContent == "_" || inputScreen.textContent == "ANSWER TOO LONG"){
-    
-      inputScreen.textContent = "0 / ";
+        inputScreenIDCheck.textContent = "ANSWER TOO LONG";
   
-    }else if(arrayNumStore[1].length == 2){
+      }else{
   
-      let operateValid = operateValidityCheck();
-      
-      if(operateValid == true){
-      
-        operate();
+        inputScreenIDCheck.textContent += " / ";
   
-        if(inputScreen.textContent.length > 8){
-  
-          answerScreenIDCheck.textContent = inputScreen.textContent;
-  
-          inputScreen.textContent = "ANSWER TOO LONG";
-  
-        }else{
-            
-          inputScreen.textContent += " / ";
-          
-        };
-          
       };
   
     }else{
+
+      buttonDivide.setAttribute("id", "buttonDividePressed");
+  
+      let arrayNumStore = currentNumber();
       
-      let inputArray = inputScreen.textContent.split("");
-  
-      if(inputArray[inputArray.length - 1] == "."){
-  
-        inputScreen.textContent = (inputScreen.textContent + "0 / ");
-  
+      const inputScreen = document.querySelector(".inputScreen");
+      
+      if(inputScreen.textContent == "_" || inputScreen.textContent == "ANSWER TOO LONG"){
+      
+        inputScreen.textContent = "0 / ";
+    
+      }else if(arrayNumStore[1].length == 2){
+    
+        let operateValid = operateValidityCheck();
+        
+        if(operateValid == true){
+        
+          operate();
+    
+          if(inputScreen.textContent.length > 8){
+    
+            answerScreenIDCheck.textContent = inputScreen.textContent;
+    
+            inputScreen.textContent = "ANSWER TOO LONG";
+    
+          }else{
+              
+            inputScreen.textContent += " / ";
+            
+          };
+            
+        };
+    
       }else{
         
-        inputScreen.textContent = (inputScreen.textContent + " / ");
-      
+        let inputArray = inputScreen.textContent.split("");
+    
+        if(inputArray[inputArray.length - 1] == "."){
+    
+          inputScreen.textContent = (inputScreen.textContent + "0 / ");
+    
+        }else{
+          
+          inputScreen.textContent = (inputScreen.textContent + " / ");
+        
+        };
+    
       };
-  
+
     };
 
     window.addEventListener('keyup', () => {
